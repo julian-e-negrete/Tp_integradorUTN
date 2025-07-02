@@ -1,0 +1,168 @@
+# depslib dependency file v1.0
+1750821764 source:d:\codeblocks\pracs\tpintegrador_version1\persona.cpp
+	"Persona.h"
+	<cstring>
+
+1750821991 d:\codeblocks\pracs\tpintegrador_version1\persona.h
+	<string>
+
+1750842642 source:d:\codeblocks\pracs\tpintegrador_version1\main.cpp
+	<iostream>
+	"Menu.h"
+
+1750814539 source:d:\codeblocks\pracs\tpintegrador_version1\producto.cpp
+	<string>
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1750814469 d:\codeblocks\pracs\tpintegrador_version1\producto.h
+	<string>
+
+1750829439 source:d:\codeblocks\pracs\tpintegrador_version1\proveedores.cpp
+	"Proveedores.h"
+	<cstring>
+
+1750829461 d:\codeblocks\pracs\tpintegrador_version1\proveedores.h
+	<string>
+
+1750833901 source:d:\codeblocks\pracs\tpintegrador_version1\compra.cpp
+	"Compra.h"
+	<iostream>
+
+1750833866 d:\codeblocks\pracs\tpintegrador_version1\compra.h
+	<string>
+
+1750645289 source:d:\codeblocks\pracs\tpintegrador_version1\detallecompra.cpp
+	"DetalleCompra.h"
+
+1750796037 d:\codeblocks\pracs\tpintegrador_version1\detallecompra.h
+
+1750836006 source:d:\codeblocks\pracs\tpintegrador_version1\venta.cpp
+	"Venta.h"
+	<iostream>
+
+1750834303 d:\codeblocks\pracs\tpintegrador_version1\venta.h
+	<string>
+
+1750646304 source:d:\codeblocks\pracs\tpintegrador_version1\detalleventa.cpp
+	"DetalleVenta.h"
+
+1750796032 d:\codeblocks\pracs\tpintegrador_version1\detalleventa.h
+
+1750655627 source:d:\codeblocks\pracs\tpintegrador_version1\categoria.cpp
+	"Categoria.h"
+
+1750796052 d:\codeblocks\pracs\tpintegrador_version1\categoria.h
+	<string>
+
+1750735006 source:d:\codeblocks\pracs\tpintegrador_version1\archivoproducto.cpp
+	"ArchivoProducto.h"
+
+1750807899 d:\codeblocks\pracs\tpintegrador_version1\archivoproducto.h
+	<string>
+	"Producto.h"
+
+1750735040 source:d:\codeblocks\pracs\tpintegrador_version1\archivoproveedores.cpp
+	"ArchivoProveedores.h"
+
+1750734457 d:\codeblocks\pracs\tpintegrador_version1\archivoproveedores.h
+	<string>
+	"Proveedores.h"
+
+1750735496 source:d:\codeblocks\pracs\tpintegrador_version1\archivoventa.cpp
+	"ArchivoVenta.h"
+
+1750835931 d:\codeblocks\pracs\tpintegrador_version1\archivoventa.h
+	<string>
+	"Venta.h"
+
+1750737244 source:d:\codeblocks\pracs\tpintegrador_version1\archivodetalleventa.cpp
+	"ArchivoDetalleVenta.h"
+
+1750736516 d:\codeblocks\pracs\tpintegrador_version1\archivodetalleventa.h
+	<string>
+	"DetalleVenta.h"
+
+1750737545 source:d:\codeblocks\pracs\tpintegrador_version1\archivocompra.cpp
+	"ArchivoCompra.h"
+
+1750833505 d:\codeblocks\pracs\tpintegrador_version1\archivocompra.h
+	<string>
+	"Compra.h"
+
+1750737809 source:d:\codeblocks\pracs\tpintegrador_version1\archivodetallecompra.cpp
+	"ArchivoDetalleCompra.h"
+
+1750737635 d:\codeblocks\pracs\tpintegrador_version1\archivodetallecompra.h
+	<string>
+	"DetalleCompra.h"
+
+1750738026 source:d:\codeblocks\pracs\tpintegrador_version1\archivocategoria.cpp
+	"ArchivoCategoria.h"
+
+1750737941 d:\codeblocks\pracs\tpintegrador_version1\archivocategoria.h
+	<string>
+	"Categoria.h"
+
+1750820751 source:d:\codeblocks\pracs\tpintegrador_version1\menulistados.cpp
+	<iostream>
+	"ArchivoProducto.h"
+	"Producto.h"
+	"Menu.h"
+
+1750837537 d:\codeblocks\pracs\tpintegrador_version1\menu.h
+	<string>
+	"ArchivoProducto.h"
+	"Producto.h"
+	"ArchivoCliente.h"
+	"Cliente.h"
+	"ArchivoCompra.h"
+	"Compra.h"
+	"ArchivoVenta.h"
+	"Venta.h"
+
+1750835620 source:d:\codeblocks\pracs\tpintegrador_version1\menuabm.cpp
+	<iostream>
+	"Menu.h"
+
+1750837521 source:d:\codeblocks\pracs\tpintegrador_version1\menulistadosclientes.cpp
+	<iostream>
+	"ArchivoCliente.h"
+	"Cliente.h"
+	"Menu.h"
+
+1750825690 source:d:\codeblocks\pracs\tpintegrador_version1\cliente.cpp
+	"Cliente.h"
+	<string>
+	<iostream>
+	<cstring>
+
+1750825591 d:\codeblocks\pracs\tpintegrador_version1\cliente.h
+	"Persona.h"
+
+1750825378 source:d:\codeblocks\pracs\tpintegrador_version1\archivocliente.cpp
+	"ArchivoCliente.h"
+
+1750825081 d:\codeblocks\pracs\tpintegrador_version1\archivocliente.h
+	<string>
+	"Cliente.h"
+
+1750829484 source:d:\codeblocks\pracs\tpintegrador_version1\menulistadosproveedores.cpp
+	<iostream>
+	"ArchivoProveedores.h"
+	"Proveedores.h"
+	"Menu.h"
+
+1750842456 source:d:\codeblocks\pracs\tpintegrador_version1\menulistadoscompras.cpp
+	<iostream>
+	"ArchivoCompra.h"
+	"Compra.h"
+	"Menu.h"
+
+1750842626 source:d:\codeblocks\pracs\tpintegrador_version1\menulistadosventas.cpp
+	<iostream>
+	"ArchivoVenta.h"
+	"Venta.h"
+	"Menu.h"
+
