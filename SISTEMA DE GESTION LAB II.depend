@@ -1,0 +1,366 @@
+# depslib dependency file v1.0
+1719430479 source:c:\users\sof\desktop\sistema de gestion lab ii\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+
+1719430572 c:\users\sof\desktop\sistema de gestion lab ii\clases.h
+	<cstring>
+	<cstdlib>
+	<iostream>
+
+1720130050 source:c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720131254 c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+
+1720131394 c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720017866 c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1720014109 c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1720130578 c:\00_julian\utn\sistema de gestion lab ii\sistema de gestion lab ii\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+
+1720135183 source:c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720199878 c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1720131394 c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720014109 c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1720130578 c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+
+1720017866 c:\users\sof\desktop\sistema de gestion lab ii (3)\sistema de gestion lab ii\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1720207767 source:c:\users\sof\desktop\sistema de gestion lab ii exportar v1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720206950 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1720131394 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720014109 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1720207712 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"exportar.h"
+	"favorito.h"
+
+1720017866 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1720275699 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\exportar.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	"clases.h"
+
+1720207767 source:c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720477195 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1720471870 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720014109 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1720477562 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"exportar.h"
+	"favorito.h"
+
+1720470359 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\exportar.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	"clases.h"
+
+1720017866 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1720207767 source:c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720543944 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1720544024 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720014109 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1720477562 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"exportar.h"
+	"favorito.h"
+
+1720543944 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\exportar.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	"clases.h"
+
+1720017866 c:\users\sof\desktop\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\sistema de gestion lab ii exportar v1\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1720545907 source:c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1720900370 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1720900884 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1720014109 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1721000416 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"exportar.h"
+	"favorito.h"
+
+1720905768 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\exportar.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	"clases.h"
+
+1720017866 c:\users\sofia\onedrive - frgp.utn.edu.ar\escritorio\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
+1721332493 source:c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+	"usuario.h"
+
+1721324970 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\clases.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+
+1721330703 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\supermercado.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"favorito.h"
+	"producto.h"
+
+1721319094 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\favorito.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+
+1721330267 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\producto.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<ctype.h>
+	"clases.h"
+	"exportar.h"
+	"favorito.h"
+
+1721073989 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\exportar.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	"clases.h"
+
+1721314081 c:\users\sof\desktop\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1 (1)\sistema de gestion lab ii exportar v1\usuario.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"clases.h"
+	"supermercado.h"
+
