@@ -57,7 +57,7 @@ void mostrarProducto(Productos producto_obj)
             ArchivoSupermercados Archivo_super;
             Supermercados supermercado_obj = Archivo_super.leerRegistro(superID);
             cout << producto_obj.getNombre() << ": $" << tempSuperProd.getPrecio() << endl;
-            cout << "SUPERMERCADO: " << supermercado_obj.getNombre() << endl;
+            supermercado_obj.Mostrar_Supermercado(); 
             
         }
     }
