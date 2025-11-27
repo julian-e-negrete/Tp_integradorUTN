@@ -7,12 +7,11 @@
 #include <ctype.h>
 
 
-
-#include "clases.h"
-
 #include "favorito.h"
 
 #include "producto.h"
+
+using namespace std;
 
 
 

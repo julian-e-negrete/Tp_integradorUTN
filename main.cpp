@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "clases.h"
 #include "supermercado.h"
 
 #include "usuario.h"

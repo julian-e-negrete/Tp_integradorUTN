@@ -10,6 +10,8 @@
 
 #include "supermercado.h"
 
+using namespace std;
+
 Usuarios loginUsuario() {
     ArchivoUsuarios Archivo;
     Usuarios usuario;

@@ -5,7 +5,13 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctype.h>
-#include "clases.h"
+
+#include "Usuarios.h"
+#include "ArchivoFavoritos.h"
+#include "Favoritos.h"
+#include "utils.h"
+
+using namespace std;
 
 
 

@@ -10,6 +10,8 @@
 #include "exportar.h"
 #include "favorito.h"
 
+using namespace std;
+
 
 
 Productos SeleccionarProductos()

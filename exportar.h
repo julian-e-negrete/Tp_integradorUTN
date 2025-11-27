@@ -6,7 +6,8 @@
 #include <cstring>
 #include <fstream>
 
-#include "clases.h"
+
+using namespace std;
 ///case 1
 ArchivoSupermercados ExportarSupermercados()
 {
