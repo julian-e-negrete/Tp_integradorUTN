@@ -5,6 +5,12 @@
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
+#include "ArchivoSupermercados.h"
+#include "ArchivoProvincias.h"
+#include "ArchivoLocalidades.h"
+#include "ArchivoCategorias.h"
+#include "ArchivoProductos.h"
+#include "ArchivoSupermercado_Producto.h"
 
 
 using namespace std;

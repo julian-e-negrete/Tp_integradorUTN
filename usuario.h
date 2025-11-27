@@ -6,6 +6,7 @@
 #include <cstring>
 
 
+#include "ArchivoUsuarios.h"
 
 #include "supermercado.h"
 
