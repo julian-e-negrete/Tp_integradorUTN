@@ -2,6 +2,8 @@
 #define PRODUCTOS_H
 
 #include <cstring>
+#include "Supermercados.h"
+#include "Usuarios.h"
 
 class Productos
 {
@@ -22,5 +24,24 @@ public:
     void setIdCategoria(int par_id);
 };
 void mostrarProducto(Productos producto_obj);
+
+
+Productos SeleccionarProductos();
+
+Productos CrearProductos(Supermercados supermercado_obj);
+
+Productos BuscarNombreProducto();
+
+Productos BuscarCategoria();
+
+Productos BuscarPrecio();
+
+Productos SeleccionarProducto_Supermercado(Supermercados supermercado_obj);
+
+Productos BuscarProductos();
+
+void menuProductos(Usuarios user);
+
+void menuProductos_super(Usuarios user, Supermercados supermercado);
 
 #endif // PRODUCTOS_H

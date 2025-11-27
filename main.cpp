@@ -2,9 +2,15 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "supermercado.h"
+#include "Supermercados.h"
 
-#include "usuario.h"
+#include "Usuarios.h"
+
+#include "Productos.h"
+
+#include "exportar.h"
+
+#include "utils.h"
 
 using namespace std;
 

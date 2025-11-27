@@ -12,6 +12,8 @@
 #include "ArchivoProductos.h"
 #include "ArchivoSupermercado_Producto.h"
 
+#include "utils.h"
+
 
 using namespace std;
 ///case 1

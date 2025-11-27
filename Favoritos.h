@@ -1,6 +1,8 @@
 #ifndef FAVORITOS_H
 #define FAVORITOS_H
 
+#include "Usuarios.h"
+
 class Favoritos
 {
 private:
@@ -20,4 +22,5 @@ public:
     void setIdSupermercado(int par_id);
 };
 
+void  AgregarFavorito(Usuarios User, int id_supermercado);
 #endif // FAVORITOS_H

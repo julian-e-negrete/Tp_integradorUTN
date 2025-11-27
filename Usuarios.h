@@ -28,4 +28,5 @@ public:
     void MostrarUsuario();
 };
 
+Usuarios loginUsuario();
 #endif // USUARIOS_H
