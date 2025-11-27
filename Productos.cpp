@@ -3,12 +3,14 @@
 #include "ArchivoCategorias.h"
 #include "ArchivoProductos.h"
 #include "ArchivoSupermercado_Producto.h"
+#include "ArchivoSupermercados.h"
 
 #include "utils.h"
 
 #include "Productos.h"
 #include "Supermercados.h"
 #include "Favoritos.h"
+
 
 
 
@@ -51,7 +53,12 @@ void mostrarProducto(Productos producto_obj)
         Supermercado_Producto tempSuperProd = Archivo.leerRegistro(i);
         if(producto_obj.getIdProducto() == tempSuperProd.getIdProducto())
         {
+            int superID = tempSuperProd.getIdSupermercado();
+            ArchivoSupermercados Archivo_super;
+            Supermercados supermercado_obj = Archivo_super.leerRegistro(superID);
             cout << producto_obj.getNombre() << ": $" << tempSuperProd.getPrecio() << endl;
+            cout << "SUPERMERCADO: " << supermercado_obj.getNombre() << endl;
+            
         }
     }
 }

@@ -704,7 +704,7 @@ Supermercados favSupermercados(Usuarios user)
 
                 if (vec==nullptr)
                 {
-                    cout<<"NO SE PUDO ASIGNAR LOS RECURSOS NECESARIOS PARA EL PROCESO, CONTACTARSE CON SOPORTE:"<<endl<<" sofia.campos@alumnos.frgp.utn.edu.ar o con julian.negrete@alumnos.frgp.utn.edu.ar"<<endl;
+                    cout<<"NO SE PUDO ASIGNAR LOS RECURSOS NECESARIOS PARA EL PROCESO, CONTACTARSE CON SOPORTE:"<<endl<<"  julian.negrete@alumnos.frgp.utn.edu.ar"<<endl;
                     waitForKey();
                     exit (-240);
                 }
