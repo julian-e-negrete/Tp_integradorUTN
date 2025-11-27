@@ -23,4 +23,5 @@ public:
     void setNombre(const char* nom);
 };
 
+Localidades SeleccionarLocalidades(int id_provincia);
 #endif // LOCALIDADES_H

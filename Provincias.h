@@ -20,4 +20,5 @@ public:
     void setNombre(const char* nom);
 };
 
+Provincias SeleccionarProvincias();
 #endif // PROVINCIAS_H

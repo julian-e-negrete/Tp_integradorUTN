@@ -21,5 +21,6 @@ public:
     void setNombre(const char* nom);
     void setIdCategoria(int par_id);
 };
+void mostrarProducto(Productos producto_obj);
 
 #endif // PRODUCTOS_H

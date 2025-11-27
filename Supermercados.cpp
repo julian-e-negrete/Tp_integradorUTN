@@ -1,6 +1,7 @@
 #include "Supermercados.h"
 #include "utils.h"
 #include <iostream>
+#include "ArchivoSupermercados.h"
 
 using namespace std;
 
@@ -63,4 +64,60 @@ void Supermercados::Mostrar_Supermercado()
 {
     cout<<"NOMBRE: "<<nombre<<endl;
     cout<<"DIRECCION: "<<direccion<<endl;
+}
+
+
+
+Supermercados SeleccionarSupermercado()
+{
+    Supermercados supermercado;
+
+    ArchivoSupermercados Archivo;
+
+    int opcion;
+
+    int cantreg = Archivo.contarRegistros();
+    bool opcionValida = false;
+
+    bool encontrado = false;
+
+    while(!opcionValida)
+    {
+    encontrado = false;
+    system("clear");
+        cout << "SELECCIONE UN SUPERMERCADO: " << endl << endl;
+        for (int i = 0; i < cantreg; i++)
+        {
+            supermercado = Archivo.leerRegistro(i);
+            cout << i << ") -- " << supermercado.getNombre() << endl;
+            encontrado = true;
+        }
+        if(!encontrado)
+        {
+            system("clear");
+            cout << "NO SE HA ENCONTRADO NINGUN SUPERMERCADO" << endl;
+            waitForKey();
+            return Supermercados();
+        }
+        cin >> opcion;
+
+        if (opcion > cantreg-1)
+        {
+            system("clear");
+            cout << "ERROR: Por favor seleccione una opcion valida." <<  endl;
+            waitForKey();
+
+        }
+        else
+        {
+            supermercado = Archivo.leerRegistro(opcion);
+            opcionValida = true;
+
+        }
+
+    }
+
+    return supermercado;
+
+
 }

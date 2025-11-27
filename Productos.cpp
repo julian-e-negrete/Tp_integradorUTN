@@ -1,5 +1,9 @@
 #include "Productos.h"
 #include <cstring>
+#include "ArchivoSupermercado_Producto.h"
+#include <iostream>
+
+using namespace std;
 
 int Productos::getIdProducto()
 {
@@ -27,3 +31,20 @@ void Productos::setIdCategoria(int par_id)
 {
     id_categoria = par_id;
 }
+
+void mostrarProducto(Productos producto_obj)
+{
+    ArchivoSupermercado_Producto Archivo;
+    int cantreg = Archivo.contarRegistros();
+
+    for (int i = 0; i < cantreg; i++)
+    {
+        Supermercado_Producto tempSuperProd = Archivo.leerRegistro(i);
+        if(producto_obj.getIdProducto() == tempSuperProd.getIdProducto())
+        {
+            cout << producto_obj.getNombre() << ": $" << tempSuperProd.getPrecio() << endl;
+        }
+    }
+}
+
+

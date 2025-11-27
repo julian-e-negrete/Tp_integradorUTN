@@ -6,7 +6,6 @@
 #include <cstring>
 
 
-#include "clases.h"
 
 #include "supermercado.h"
 

@@ -33,4 +33,5 @@ public:
     void Mostrar_Supermercado();
 };
 
+Supermercados SeleccionarSupermercado();
 #endif // SUPERMERCADOS_H

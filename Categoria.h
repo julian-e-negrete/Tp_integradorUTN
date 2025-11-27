@@ -20,4 +20,6 @@ public:
     void setNombre(const char* nom);
 };
 
+Categoria SeleccionarCategoria();
+
 #endif // CATEGORIA_H
