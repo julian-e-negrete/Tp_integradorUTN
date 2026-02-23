@@ -318,24 +318,22 @@ void menuReportes() {
         system("clear");
         cout << "=== INFORMES ===\n";
         cout << "1) Valor inventario por supermercado\n";
-        cout << "2) Favoritos por usuario\n";
-        cout << "3) Precio promedio por categor\u00eda\n";
-        cout << "4) Cantidad de productos por categor\u00eda\n";
-        cout << "5) Compras por usuario\n";
-        cout << "6) Detalle de compras\n";
-        cout << "7) Recaudacion anual\n";
-        cout << "8) Gasto por supermercado\n";
+        cout << "2) Precio promedio por categor\u00eda\n";
+        cout << "3) Cantidad de productos por categor\u00eda\n";
+        cout << "4) Compras por usuario\n";
+        cout << "5) Detalle de compras\n";
+        cout << "6) Recaudacion anual\n";
+        cout << "7) Gasto por supermercado\n";
         cout << "9) VOLVER\n";
         cin >> opcion;
         switch (opcion) {
             case 1: informeInventarioPorSupermercado(); break;
-            case 2: informeFavoritosPorUsuario(); break;
-            case 3: informePrecioPromedioPorCategoria(); break;
-            case 4: informeProductosPorCategoria(); break;
-            case 5: informeComprasPorUsuario(); break;
-            case 6: informeDetalleCompras(); break;
-            case 7: informeRecaudacionAnual(); break;
-            case 8: informeGastoPorSupermercado(); break;
+            case 2: informePrecioPromedioPorCategoria(); break;
+            case 3: informeProductosPorCategoria(); break;
+            case 4: informeComprasPorUsuario(); break;
+            case 5: informeDetalleCompras(); break;
+            case 6: informeRecaudacionAnual(); break;
+            case 7: informeGastoPorSupermercado(); break;
             case 9: salir = true; break;
             default:
                 cout << "Opcion invalida" << endl;
