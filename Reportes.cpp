@@ -122,7 +122,7 @@ void informePrecioPromedioPorCategoria() {
         float sum = p.second.first;
         int cnt = p.second.second;
         float prom = (cnt > 0) ? sum / cnt : 0;
-        string nombre = "(sin categor\u00eda)";
+        string nombre = "(sin categoria)";
         for (int j = 0; j < nC; j++) {
             Categoria tmp = archC.leerRegistro(j);
             if (tmp.getIdCategoria() == idCat) {
@@ -150,14 +150,14 @@ void informeProductosPorCategoria() {
     }
 
     system("clear");
-    cout << "Cantidad de productos registrados en cada categor\u00eda:\n\n";
+    cout << "Cantidad de productos registrados en cada categoria:\n\n";
     cout << left << setw(30) << "CATEGORIA" << right << setw(10) << "CANT" << "\n";
     cout << string(40, '-') << "\n";
     int nC = archC.contarRegistros();
     for (auto &p : cuenta) {
         int idCat = p.first;
         int cnt = p.second;
-        string nombre = "(sin categor\u00eda)";
+        string nombre = "(sin categoria)";
         for (int j = 0; j < nC; j++) {
             Categoria tmp = archC.leerRegistro(j);
             if (tmp.getIdCategoria() == idCat) {
@@ -318,8 +318,8 @@ void menuReportes() {
         system("clear");
         cout << "=== INFORMES ===\n";
         cout << "1) Valor inventario por supermercado\n";
-        cout << "2) Precio promedio por categor\u00eda\n";
-        cout << "3) Cantidad de productos por categor\u00eda\n";
+        cout << "2) Precio promedio por categoria\n";
+        cout << "3) Cantidad de productos por categoria\n";
         cout << "4) Compras por usuario\n";
         cout << "5) Detalle de compras\n";
         cout << "6) Recaudacion anual\n";
