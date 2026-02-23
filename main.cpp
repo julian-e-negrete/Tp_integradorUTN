@@ -9,6 +9,7 @@
 #include "Productos.h"
 
 #include "exportar.h"
+#include "Reportes.h"
 
 #include "utils.h"
 
@@ -24,6 +25,7 @@ void menuInicial(Usuarios usuario){
         cout << "1) SUPERMERCADO" << endl;
         cout << "2) PRODUCTOS" << endl;
         cout << "3) EXPORTAR    " << endl;
+        cout << "4) INFORMES    " << endl;
         cout << "9) BACK" << endl;
 
         cin >> opcion;
@@ -39,7 +41,10 @@ void menuInicial(Usuarios usuario){
 
             case 3:
                 menuExportar();
+                break;
 
+            case 4:
+                menuReportes();
                 break;
 
             case 9:

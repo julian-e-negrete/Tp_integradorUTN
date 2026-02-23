@@ -1,9 +1,18 @@
 #include <cstring>
 #include <iostream>
+#include <vector>
 #include "ArchivoCategorias.h"
+
+// carrito de compras en memoria
+struct CarritoItem { int idProducto; float precio; };
+
+void mostrarCarrito(const std::vector<CarritoItem>& cart);
+void finalizarCarrito(class Usuarios user, class Supermercados supermercado, const std::vector<CarritoItem>& cart);
 #include "ArchivoProductos.h"
 #include "ArchivoSupermercado_Producto.h"
 #include "ArchivoSupermercados.h"
+#include "Compras.h"
+#include "ArchivoCompras.h"
 
 #include "utils.h"
 
@@ -62,7 +71,6 @@ void mostrarProducto(Productos producto_obj)
         }
     }
 }
-
 
 
 Productos SeleccionarProductos()
@@ -569,7 +577,8 @@ Productos BuscarPrecio()
         }
     }
 
-
+    // seguridad: si se llega acá
+    return producto_obj;
 }
 
 
@@ -583,67 +592,57 @@ Productos SeleccionarProducto_Supermercado(Supermercados supermercado_obj)
     int cantreg_super = Archivo_Prod_super.contarRegistros();
     int cantreg = Archivo.contarRegistros();
 
-    if(cantreg_super < 1)
-    {
+    if (cantreg_super < 1) {
         cout << "NO SE HA ENCONTRADO NINGUN PRODUCTO." << endl;
         waitForKey();
         return Productos();
     }
-    else
-    {
-        int contador=0;
-        bool bandera=false;
 
-        int opcion;
-        bool valida = false;
-        while(!valida)
-        {
-
-            for (int i = 0; i < cantreg_super; i++)
-            {
-                Supermercado_Producto  tempSuperProd = Archivo_Prod_super.leerRegistro(i);
-
-                if(supermercado_obj.getIdSupermercado() == tempSuperProd.getIdSupermercado())
-                {
-                    for(int j = 0; j < cantreg; j++)
-                    {
-                        Productos tempProd = Archivo.leerRegistro(j);
-
-                        if(tempProd.getIdProducto() == tempSuperProd.getIdProducto())
-                        {
-                            if (bandera==false)
-                            {
-                                system("clear");
-                                cout << "PRODUCTOS REGISTRADOS: " << endl << endl;
-                                bandera=true;
-
-                            }
-                            cout << j << ") -- " << tempProd.getNombre() << ": $" << tempSuperProd.getPrecio() << endl;
-                            contador++;
-                        }
-                    }
-                    if (bandera==true)
-                    {
-
-                        valida=true;
-                        return producto_obj;
-                    }
+    // armar lista de opciones
+    struct Opcion { int idxProd; int idxSP; };
+    std::vector<Opcion> opciones;
+    for (int i = 0; i < cantreg_super; i++) {
+        Supermercado_Producto tempSP = Archivo_Prod_super.leerRegistro(i);
+        if (supermercado_obj.getIdSupermercado() == tempSP.getIdSupermercado()) {
+            for (int j = 0; j < cantreg; j++) {
+                Productos tempProd = Archivo.leerRegistro(j);
+                if (tempProd.getIdProducto() == tempSP.getIdProducto()) {
+                    opciones.push_back({j, i});
                 }
             }
-
-            if (contador==0)
-            {
-                system("clear");
-                cout<<"NO SE ENCONTRARON PRODUCTOS REGISTRADOS EN EL SUPERMERCADO: "<<supermercado_obj.getNombre()<<endl;
-                waitForKey();
-                return Productos();
-            }
-
         }
-
-
     }
 
+    if (opciones.empty()) {
+        system("clear");
+        cout << "NO SE ENCONTRARON PRODUCTOS REGISTRADOS EN EL SUPERMERCADO: " << supermercado_obj.getNombre() << endl;
+        waitForKey();
+        return Productos();
+    }
+
+    int opcion;
+    bool valida = false;
+    while (!valida) {
+        system("clear");
+        cout << "PRODUCTOS REGISTRADOS: " << endl << endl;
+        for (int k = 0; k < (int)opciones.size(); k++) {
+            Productos tempProd = Archivo.leerRegistro(opciones[k].idxProd);
+            Supermercado_Producto tempSP = Archivo_Prod_super.leerRegistro(opciones[k].idxSP);
+            cout << k+1 << ") " << tempProd.getNombre() << ": $" << tempSP.getPrecio() << endl;
+        }
+        cout << "INGRESE SU ELECCION: ";
+        cin >> opcion;
+        if (opcion < 1 || opcion > (int)opciones.size()) {
+            system("clear");
+            cout << "ERROR: ELiJA UNA OPCION VALIDA." << endl;
+            waitForKey();
+        } else {
+            producto_obj = Archivo.leerRegistro(opciones[opcion-1].idxProd);
+            valida = true;
+        }
+    }
+
+    return producto_obj;
 }
 
 
@@ -706,7 +705,6 @@ Productos BuscarProductos()
 
 
 }
-
 
 
 void listarProductosSuper(Supermercados supermercado_obj)
@@ -821,11 +819,58 @@ void menuProductos(Usuarios user)
 }
 
 
+void mostrarCarrito(const std::vector<CarritoItem>& cart) {
+    system("clear");
+    if(cart.empty()) {
+        cout << "El carrito esta vacio." << endl;
+    } else {
+        ArchivoProductos archP("productos.dat");
+        cout << "Contenido del carrito:\n";
+        for(size_t i=0;i<cart.size();i++) {
+            Productos p = archP.leerRegistro(cart[i].idProducto);
+            cout << "  " << i+1 << ") " << p.getNombre() << ": $" << cart[i].precio << "\n";
+        }
+    }
+    waitForKey();
+}
+
+void finalizarCarrito(Usuarios user, Supermercados supermercado, const std::vector<CarritoItem>& cart) {
+    if(cart.empty()) {
+        cout << "No hay elementos para comprar." << endl;
+        waitForKey();
+        return;
+    }
+    ArchivoCompras archC("compras.dat");
+    int nc = archC.contarRegistros();
+    Compras comp;
+    for(size_t k=0;k<cart.size();k++) {
+        if(nc > 0) {
+            Compras ult = archC.leerRegistro(nc - 1);
+            comp.setIdCompra(ult.getIdCompra() + 1);
+        } else {
+            comp.setIdCompra(1);
+        }
+        comp.setIdUsuario(user.getIdUsuario());
+        comp.setIdSupermercado(supermercado.getIdSupermercado());
+        comp.setIdProducto(cart[k].idProducto);
+        comp.setPrecio(cart[k].precio);
+        char fecha[11];
+        obtenerFechaActual(fecha, sizeof(fecha));
+        comp.setFecha(fecha);
+        archC.grabarRegistro(comp);
+        nc++;
+    }
+    system("clear");
+    cout << "Compra finalizada: " << cart.size() << " items registrados." << endl;
+    waitForKey();
+}
+
 void menuProductos_super(Usuarios user, Supermercados supermercado)
 {
     Productos producto_obj;
     int opcion;
     bool valida = false;
+    std::vector<CarritoItem> carrito;       // carrito local
     while(!valida)
     {
         system("clear");
@@ -835,6 +880,8 @@ void menuProductos_super(Usuarios user, Supermercados supermercado)
         cout << "1) AGREGAR PRODUCTOS" << endl;
         cout << "2) AGREGAR A FAVORITOS" << endl;
         cout << "3) LISTAR PRODUCTOS " << endl;
+        cout << "4) REALIZAR COMPRA" << endl;
+        cout << "5) CARRITO" << endl;
         cout << "9) BACK" << endl;
 
         cin >> opcion;
@@ -854,6 +901,60 @@ void menuProductos_super(Usuarios user, Supermercados supermercado)
 
         case 3:
             listarProductosSuper(supermercado);
+            break;
+        case 4:
+            registrarCompra(user, supermercado);
+            break;
+        case 5:
+            {
+                // menú de carrito
+                bool salidaCar=false;
+                while(!salidaCar) {
+                    system("clear");
+                    cout << "--- CARRITO (" << carrito.size() << " items) ---\n";
+                    cout << "1) AGREGAR AL CARRITO" << endl;
+                    cout << "2) VER CARRITO" << endl;
+                    cout << "3) FINALIZAR COMPRA" << endl;
+                    cout << "9) VOLVER" << endl;
+                    int op2; cin >> op2;
+                    switch(op2) {
+                        case 1: {
+                            Productos psel = SeleccionarProducto_Supermercado(supermercado);
+                            if(psel.getIdProducto()!=0) {
+                                // obtener precio
+                                ArchivoSupermercado_Producto archSP("supermercado_producto.dat");
+                                int nsp = archSP.contarRegistros();
+                                float precio=0.0f;
+                                for(int i=0;i<nsp;i++) {
+                                    Supermercado_Producto sp = archSP.leerRegistro(i);
+                                    if(sp.getIdSupermercado()==supermercado.getIdSupermercado() &&
+                                       sp.getIdProducto()==psel.getIdProducto()) {
+                                        precio = sp.getPrecio();
+                                        break;
+                                    }
+                                }
+                                carrito.push_back({psel.getIdProducto(),precio});
+                                cout << "Producto agregado al carrito." << endl;
+                                waitForKey();
+                            }
+                            break;
+                        }
+                        case 2:
+                            mostrarCarrito(carrito);
+                            break;
+                        case 3:
+                            finalizarCarrito(user, supermercado, carrito);
+                            carrito.clear();
+                            break;
+                        case 9:
+                            salidaCar=true;
+                            break;
+                        default:
+                            cout << "Opcion invalida" << endl;
+                            waitForKey();
+                    }
+                }
+            }
             break;
 
         case 9:

@@ -4,6 +4,7 @@
 #include <cstring>
 #include <fstream>
 #include <limits>
+#include <ctime>
 
 using namespace std;
 
@@ -43,5 +44,16 @@ void tolower_string(char *str)
     {
         str[i] = tolower((unsigned char)str[i]);
     }
+}
+
+void obtenerFechaActual(char *buffer, int tam)
+{
+    time_t t = time(NULL);
+    struct tm *tm_info = localtime(&t);
+    if (tm_info == nullptr) {
+        buffer[0] = '\0';
+        return;
+    }
+    strftime(buffer, tam, "%Y-%m-%d", tm_info);
 }
 
