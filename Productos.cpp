@@ -825,10 +825,19 @@ void mostrarCarrito(const std::vector<CarritoItem>& cart) {
         cout << "El carrito esta vacio." << endl;
     } else {
         ArchivoProductos archP("productos.dat");
+        int nP = archP.contarRegistros();
         cout << "Contenido del carrito:\n";
         for(size_t i=0;i<cart.size();i++) {
-            Productos p = archP.leerRegistro(cart[i].idProducto);
-            cout << "  " << i+1 << ") " << p.getNombre() << ": $" << cart[i].precio << "\n";
+            // buscar nombre por idProducto
+            string nombre = "(desconocido)";
+            for(int j=0; j<nP; j++) {
+                Productos p = archP.leerRegistro(j);
+                if(p.getIdProducto() == cart[i].idProducto) {
+                    nombre = p.getNombre();
+                    break;
+                }
+            }
+            cout << "  " << i+1 << ") " << nombre << ": $" << cart[i].precio << "\n";
         }
     }
     waitForKey();

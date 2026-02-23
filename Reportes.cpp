@@ -9,6 +9,7 @@
 #include "utils.h"
 
 #include <iostream>
+#include <iomanip>
 #include <map>
 #include <string>
 #include <cstdlib>
@@ -29,7 +30,10 @@ void informeInventarioPorSupermercado() {
     }
 
     system("clear");
-    cout << "Valor total de los productos listados por supermercado:\n";
+    cout << "Valor total de los productos listados por supermercado:\n\n";
+    // cabecera
+    cout << left << setw(30) << "SUPERMERCADO" << right << setw(12) << "TOTAL" << "\n";
+    cout << string(42, '-') << "\n";
     for (auto &p : acumulado) {
         int id = p.first;
         float total = p.second;
@@ -42,7 +46,7 @@ void informeInventarioPorSupermercado() {
                 break;
             }
         }
-        cout << "   " << nombre << " : $" << total << "\n";
+        cout << left << setw(30) << nombre << right << setw(12) << fixed << setprecision(2) << total << "\n";
     }
     waitForKey();
 }
@@ -60,7 +64,9 @@ void informeFavoritosPorUsuario() {
     }
 
     system("clear");
-    cout << "Cantidad de supermercados marcados como favoritos por usuario:\n";
+    cout << "Cantidad de supermercados marcados como favoritos por usuario:\n\n";
+    cout << left << setw(20) << "USUARIO" << setw(30) << "CORREO" << right << setw(10) << "CANT" << "\n";
+    cout << string(60, '-') << "\n";
     int nU = archU.contarRegistros();
     for (auto &p : cuenta) {
         int id = p.first;
@@ -75,7 +81,7 @@ void informeFavoritosPorUsuario() {
                 break;
             }
         }
-        cout << "   " << nombre << " (" << correo << ") : " << cant << " favoritos\n";
+        cout << left << setw(20) << nombre << setw(30) << correo << right << setw(10) << cant << "\n";
     }
     waitForKey();
 }
@@ -107,7 +113,9 @@ void informePrecioPromedioPorCategoria() {
     }
 
     system("clear");
-    cout << "Precio promedio de los productos por categor\u00eda:\n";
+    cout << "Precio promedio de los productos por categor\u00eda:\n\n";
+    cout << left << setw(30) << "CATEGORIA" << right << setw(12) << "PROMEDIO" << setw(8) << "CANT" << "\n";
+    cout << string(50, '-') << "\n";
     int nC = archC.contarRegistros();
     for (auto &p : datos) {
         int idCat = p.first;
@@ -122,7 +130,9 @@ void informePrecioPromedioPorCategoria() {
                 break;
             }
         }
-        cout << "   " << nombre << " : promedio $" << prom << " (" << cnt << " precios)\n";
+        cout << left << setw(30) << nombre
+             << right << setw(12) << fixed << setprecision(2) << prom
+             << setw(8) << cnt << "\n";
     }
     waitForKey();
 }
@@ -140,7 +150,9 @@ void informeProductosPorCategoria() {
     }
 
     system("clear");
-    cout << "Cantidad de productos registrados en cada categor\u00eda:\n";
+    cout << "Cantidad de productos registrados en cada categor\u00eda:\n\n";
+    cout << left << setw(30) << "CATEGORIA" << right << setw(10) << "CANT" << "\n";
+    cout << string(40, '-') << "\n";
     int nC = archC.contarRegistros();
     for (auto &p : cuenta) {
         int idCat = p.first;
@@ -153,7 +165,7 @@ void informeProductosPorCategoria() {
                 break;
             }
         }
-        cout << "   " << nombre << " : " << cnt << " productos\n";
+        cout << left << setw(30) << nombre << right << setw(10) << cnt << "\n";
     }
     waitForKey();
 }
@@ -171,7 +183,9 @@ void informeComprasPorUsuario() {
     }
 
     system("clear");
-    cout << "Monto total gastado por usuario:\n";
+    cout << "Monto total gastado por usuario:\n\n";
+    cout << left << setw(20) << "USUARIO" << setw(30) << "CORREO" << right << setw(12) << "TOTAL" << "\n";
+    cout << string(62, '-') << "\n";
     int nU = archU.contarRegistros();
     for (auto &p : gasto) {
         int id = p.first;
@@ -186,7 +200,7 @@ void informeComprasPorUsuario() {
                 break;
             }
         }
-        cout << "   " << nombre << " (" << correo << ") : $" << monto << "\n";
+        cout << left << setw(20) << nombre << setw(30) << correo << right << setw(12) << fixed << setprecision(2) << monto << "\n";
     }
     waitForKey();
 }
@@ -199,7 +213,11 @@ void informeDetalleCompras() {
 
     int nC = archC.contarRegistros();
     system("clear");
-    cout << "Detalle de todas las compras:\n";
+    cout << "Detalle de todas las compras:\n\n";
+    // encabezado amplio
+    cout << left << setw(6) << "ID" << setw(20) << "USUARIO" << setw(30) << "CORREO"
+         << setw(30) << "PRODUCTO" << setw(20) << "SUPERMERCADO" << right << setw(10) << "PRECIO" << setw(12) << "FECHA" << "\n";
+    cout << string(128, '-') << "\n";
     for (int i = 0; i < nC; i++) {
         Compras c = archC.leerRegistro(i);
         string nombreU = "(usu.)";
@@ -228,9 +246,41 @@ void informeDetalleCompras() {
                 break;
             }
         }
-        cout << "  Compra " << c.getIdCompra() << ": " << nombreU << " (" << correo << ") compró " << nombreP
-             << " en " << nombreS << " por $" << c.getPrecio()
-             << " el " << c.getFecha() << "\n";
+        cout << left << setw(6) << c.getIdCompra()
+             << setw(20) << nombreU << setw(30) << correo
+             << setw(30) << nombreP << setw(20) << nombreS
+             << right << setw(10) << fixed << setprecision(2) << c.getPrecio()
+             << setw(12) << c.getFecha() << "\n";
+    }
+    waitForKey();
+}
+
+void informeGastoPorSupermercado() {
+    ArchivoCompras archC("compras.dat");
+    ArchivoSupermercados archS("supermercados.dat");
+    int nC = archC.contarRegistros();
+    map<int, float> gasto; // id_supermercado -> monto
+    for (int i = 0; i < nC; i++) {
+        Compras c = archC.leerRegistro(i);
+        gasto[c.getIdSupermercado()] += c.getPrecio();
+    }
+    system("clear");
+    cout << "Monto gastado en cada supermercado:\n\n";
+    cout << left << setw(30) << "SUPERMERCADO" << right << setw(12) << "TOTAL" << "\n";
+    cout << string(42, '-') << "\n";
+    int nS = archS.contarRegistros();
+    for (auto &p : gasto) {
+        int id = p.first;
+        float total = p.second;
+        string nombre = "(desconocido)";
+        for (int j = 0; j < nS; j++) {
+            Supermercados s = archS.leerRegistro(j);
+            if (s.getIdSupermercado() == id) {
+                nombre = s.getNombre();
+                break;
+            }
+        }
+        cout << left << setw(30) << nombre << right << setw(12) << fixed << setprecision(2) << total << "\n";
     }
     waitForKey();
 }
@@ -252,9 +302,11 @@ void informeRecaudacionAnual() {
     }
 
     system("clear");
-    cout << "Recaudacion por año:\n";
+    cout << "Recaudacion por año:\n\n";
+    cout << left << setw(6) << "ANIO" << right << setw(12) << "TOTAL" << "\n";
+    cout << string(18, '-') << "\n";
     for (auto &p : porAnio) {
-        cout << "  " << p.first << " : $" << p.second << "\n";
+        cout << left << setw(6) << p.first << right << setw(12) << fixed << setprecision(2) << p.second << "\n";
     }
     waitForKey();
 }
@@ -272,6 +324,7 @@ void menuReportes() {
         cout << "5) Compras por usuario\n";
         cout << "6) Detalle de compras\n";
         cout << "7) Recaudacion anual\n";
+        cout << "8) Gasto por supermercado\n";
         cout << "9) VOLVER\n";
         cin >> opcion;
         switch (opcion) {
@@ -282,6 +335,7 @@ void menuReportes() {
             case 5: informeComprasPorUsuario(); break;
             case 6: informeDetalleCompras(); break;
             case 7: informeRecaudacionAnual(); break;
+            case 8: informeGastoPorSupermercado(); break;
             case 9: salir = true; break;
             default:
                 cout << "Opcion invalida" << endl;

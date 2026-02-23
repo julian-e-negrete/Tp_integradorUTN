@@ -20,6 +20,7 @@ void informeProductosPorCategoria();             // como "libros vendidos por g\
 void informeComprasPorUsuario();                // cu\u00e1nto gast\u00f3 cada usuario
 void informeDetalleCompras();                   // listar cada compra con supermercado, producto y precio
 void informeRecaudacionAnual();                 // monto total facturado por a\u00f1o (usa fecha)
+void informeGastoPorSupermercado();            // monto gastado en cada supermercado
 
 // menu que agrupa los informes
 void menuReportes();
